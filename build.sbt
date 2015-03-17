@@ -1,4 +1,4 @@
-name := "twitter spark"
+name := "twitter spark pro"
 
 version := "1.0"
 
