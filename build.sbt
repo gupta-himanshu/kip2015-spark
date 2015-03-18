@@ -8,5 +8,6 @@ libraryDependencies ++= Seq(
                       "org.apache.spark" %% "spark-core" % "1.2.1",
 
                       "org.apache.spark" %% "spark-streaming" % "1.2.1",
-                      "org.apache.spark" %% "spark-streaming-twitter" % "1.2.1"
+                      "org.apache.spark" %% "spark-streaming-twitter" % "1.2.1",
+			"org.apache.spark" % "spark-sql_2.11" % "1.2.1"
                     )
