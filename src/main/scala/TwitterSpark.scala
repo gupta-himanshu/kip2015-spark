@@ -9,8 +9,8 @@ import org.apache.spark.streaming.StreamingContext._
  * TwitterUtils steam the tweets and collect # (hastags) from it and save in a text file
  */
 
-object Tutorial extends App {
-  val conf = new SparkConf().setAppName("myStream").setMaster("local[2]")
+object TwitterSpark extends App {
+  val conf = new SparkConf().setAppName("myStream").setMaster("local[2]").set("spark.hadoop.validateOutputSpecs", "false")
   val sc = new SparkContext(conf)
   val ssc = new StreamingContext(sc, Seconds(2))
   val client = new TwitterClient()
@@ -19,7 +19,12 @@ object Tutorial extends App {
   val statuses = inputDstream.map { x => x.getText }
   val words = statuses.flatMap { x => x.split(" ") }
   val hastag = words.filter { x => x.startsWith("#")}
-  hastag.saveAsTextFiles("tweets/tweets")
+  val tweet=sc.textFile("tweet")
+  hastag.foreachRDD(x=>x.coalesce(1, true).saveAsTextFile("temp"))
+  val temp=sc.textFile("temp")
+  val file=tweet++temp
+  file.saveAsTextFile("tweet")
+ // hastag.saveAsTextFiles("tweets/tweets")
   ssc.start()
-  ssc.awaitTermination()
+  ssc.awaitTermination()  
 }
