@@ -11,7 +11,7 @@ import org.apache.spark.streaming.StreamingContext._
 
 object TwitterSpark extends App {
 
-  val conf = new SparkConf().setAppName("myStream").setMaster("local[2]").set("spark.hadoop.validateOutputSpecs", "false")
+  val conf = new SparkConf().setAppName("myStream").setMaster("local[2]")
   val sc = new SparkContext(conf)
   val ssc = new StreamingContext(sc, Seconds(2))
   val client = new TwitterClient()
