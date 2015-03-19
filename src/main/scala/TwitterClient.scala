@@ -1,19 +1,23 @@
 /**Set keys for twitter authentication*/
 import twitter4j.Twitter
-import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
-import twitter4j.auth.AccessToken;
+import twitter4j.TwitterException
+import twitter4j.TwitterFactory
+import twitter4j.auth.AccessToken
 import twitter4j.auth.RequestToken;
+import com.typesafe.config.ConfigFactory
 
 /**
  * @author knoldus
  */
 /**class for set twitter keys*/
 class TwitterClient {
-  val CONSUMER_KEY: String = "Tn6mCikBNxLviA6znN4FgIXfY"
-  val CONSUMER_KEY_SECRET: String = "JoRN26wNoPUuUYsgR4zKwre82zTY53r8rDzy6nLSrS4cMqiRzg"
-  val ACCESS_TOKEN = "199435611-ancQT2HKivvIrlrKg2FYLTBoQyA0zsISGhDbO7ug"
-  val ACCESS_TOKEN_SECRET = "wHaw4X7ok2uWXVGvOAOzaSgZvRovK4xFY4CAMLoNuMOy8"
+  
+  val config = ConfigFactory.load();
+  val CONSUMER_KEY: String = config.getString("twitter4j.oauth.consumerKey")
+  val CONSUMER_KEY_SECRET: String = config.getString("twitter4j.oauth.consumerSecret")
+  val ACCESS_TOKEN = config.getString("twitter4j.oauth.accessToken")
+  val ACCESS_TOKEN_SECRET = config.getString("twitter4j.oauth.accessTokenSecret")
+ 
   /**
   *This function to set consumer key and access token for twitter authentication 
   * @return Twitter
