@@ -10,13 +10,6 @@ object TweetShow extends App {
     return (new File(directoryName)).listFiles.filter(_.isDirectory).map(_.getName)
   }
 
-  def rddList(list: List[String]): List[RDD[String]] = {
-    list match {
-      case Nil     => List(sc.parallelize(Nil))
-      case y :: ys => sc.textFile("tweets/" + y) :: rddList(ys)
-    }
-  }
-
   def reduceRDDList(list: List[RDD[String]]): RDD[String] = {
     list match {
       case Nil     => sc.parallelize(Nil)
@@ -29,11 +22,11 @@ object TweetShow extends App {
   val sqlContext = new SQLContext(sc)
   import sqlContext.createSchemaRDD
   val tree = getListOfSubDirectories("tweets")
-  val RDDList = rddList(tree.toList)
-  val RDDFinal = reduceRDDList(RDDList)
+  val RDDList = tree.toList.map(x=>sc.textFile("tweets/"+x))  //getting List of RDD of collected Hashtags
+  val RDDFinal = reduceRDDList(RDDList)                      //getting union of all RDD
   val schemaString = "tweets"
-  val schema = StructType(schemaString.split(" ").map(fieldName => StructField(fieldName, StringType, true)))
-  val tweetRDD = RDDFinal.filter { x => x.startsWith("#") }.map(_.split(" ")).map(p => Row(p(0)))
+  val schema = StructType(schemaString.split(" ").map(fieldName => StructField(fieldName, StringType, true))) //creating schema for temp table
+  val tweetRDD = RDDFinal.filter { x => x.startsWith("#") }.map(_.split(" ")).map(p => Row(p(0).toLowerCase()))    //filtering hashtags from RDD (RDDFinal)
   val tweetSchemaRDD = sqlContext.applySchema(tweetRDD, schema)
   tweetSchemaRDD.registerTempTable("tweetsTable")
   val result = sqlContext.sql("SELECT tweets FROM tweetsTable")
