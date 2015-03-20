@@ -3,7 +3,7 @@
   <classpathentry kind="src" path="src/main/java" output="target/scala-2.11/classes"/>
   <classpathentry kind="src" path="src/test/scala" output="target/scala-2.11/test-classes"/>
   <classpathentry kind="src" path="src/test/java" output="target/scala-2.11/test-classes"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.4.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.2.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-1.2.1.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/chill_2.11/jars/chill_2.11-0.5.0.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.5.0.jar"/>
@@ -20,7 +20,6 @@
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/xmlenc/xmlenc/jars/xmlenc-0.52.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.1.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.5.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-configuration/commons-configuration/jars/commons-configuration-1.6.jar"/>
@@ -28,8 +27,6 @@
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-digester/commons-digester/jars/commons-digester-1.8.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.7.0.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.8.8.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.8.8.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.apache.avro/avro/jars/avro-1.7.4.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar"/>
@@ -111,10 +108,6 @@
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.json4s/json4s-ast_2.11/jars/json4s-ast_2.11-3.2.10.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.6.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.11.0.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.11.0.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.0.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar"/>
-  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.3.1.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.3.0.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.3.1.jar"/>
@@ -133,6 +126,22 @@
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.apache.spark/spark-streaming-twitter_2.11/jars/spark-streaming-twitter_2.11-1.2.1.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.twitter4j/twitter4j-stream/jars/twitter4j-stream-3.0.3.jar"/>
   <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.twitter4j/twitter4j-core/jars/twitter4j-core-3.0.3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-1.2.1.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/jars/spark-catalyst_2.11-1.2.1.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.11.2.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.2.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.2.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.2.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-column/jars/parquet-column-1.6.0rc3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-common/jars/parquet-common-1.6.0rc3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-encoding/jars/parquet-encoding-1.6.0rc3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-generator/jars/parquet-generator-1.6.0rc3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.5.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-hadoop/jars/parquet-hadoop-1.6.0rc3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-format/jars/parquet-format-2.2.0-rc1.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/com.twitter/parquet-jackson/jars/parquet-jackson-1.6.0rc3.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.11.jar"/>
+  <classpathentry kind="lib" path="/home/knoldus/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.11.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
   <classpathentry kind="output" path="bin"/>
 </classpath>
