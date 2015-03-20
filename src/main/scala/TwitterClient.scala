@@ -8,7 +8,7 @@ import twitter4j.auth.RequestToken;
 /**
  * @author knoldus
  */
-class twitterclient {
+class TwitterClient {
     val CONSUMER_KEY:String = "Tn6mCikBNxLviA6znN4FgIXfY"
     val CONSUMER_KEY_SECRET:String = "JoRN26wNoPUuUYsgR4zKwre82zTY53r8rDzy6nLSrS4cMqiRzg"
     val ACCESS_TOKEN="199435611-ancQT2HKivvIrlrKg2FYLTBoQyA0zsISGhDbO7ug"
